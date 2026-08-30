@@ -1,0 +1,417 @@
+<meta charset="utf-8">
+<title>Sailey's</title>
+<meta name="description" content="Sailey's — MUA &amp; formatrice certifiée. Maquillage événementiel entre Tanger, Casablanca, Marrakech et la France, et formations pour apprendre l'art du maquillage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Italiana&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --vellum:#faf2e7;
+  --vellum-2:#f3e6d8;
+  --blush:#f0dcd2;
+  --espresso:#2b1d18;
+  --umber:#6b5347;
+  --umber-dim:#8a7267;
+  --rosewood:#a13f52;
+  --rosewood-bright:#c05266;
+  --champagne:#b8934a;
+  --champagne-bright:#d1ac66;
+  --hairline: rgba(43,29,24,0.16);
+  --font-display:'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  --font-eyebrow:'Italiana', 'Cormorant Garamond', Georgia, serif;
+  --font-body:'Jost', -apple-system, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --vellum:#241813;
+    --vellum-2:#2e1f19;
+    --blush:#3a2822;
+    --espresso:#f3e6d8;
+    --umber:#d8c3b4;
+    --umber-dim:#b39d8e;
+    --rosewood:#e0788a;
+    --rosewood-bright:#ea8fa0;
+    --champagne:#d1ac66;
+    --champagne-bright:#e3c284;
+    --hairline: rgba(243,230,216,0.14);
+  }
+}
+:root[data-theme="dark"]{
+  --vellum:#241813;
+  --vellum-2:#2e1f19;
+  --blush:#3a2822;
+  --espresso:#f3e6d8;
+  --umber:#d8c3b4;
+  --umber-dim:#b39d8e;
+  --rosewood:#e0788a;
+  --rosewood-bright:#ea8fa0;
+  --champagne:#d1ac66;
+  --champagne-bright:#e3c284;
+  --hairline: rgba(243,230,216,0.14);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--vellum);
+  color:var(--espresso);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+}
+
+.wrap{max-width:1080px; margin:0 auto; padding:0 32px;}
+@media (max-width:640px){ .wrap{padding:0 22px;} }
+
+a{color:inherit;}
+a:focus-visible, button:focus-visible{outline:2px solid var(--rosewood); outline-offset:3px;}
+
+.eyebrow{
+  font-family:var(--font-eyebrow);
+  font-size:0.78rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--rosewood);
+}
+
+.swatches{ display:flex; gap:9px; align-items:center; }
+.swatches span{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+.swatches .s1{background:var(--rosewood);}
+.swatches .s2{background:var(--champagne);}
+.swatches .s3{background:var(--blush); border:1px solid var(--hairline);}
+.swatches .s4{background:var(--umber-dim);}
+
+/* ---- NAV ---- */
+nav.top{
+  position:sticky; top:0; z-index:20;
+  background:color-mix(in srgb, var(--vellum) 88%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--hairline);
+}
+nav.top .row{ display:flex; align-items:center; justify-content:space-between; padding:20px 0; }
+.brandmark{ display:flex; align-items:center; gap:12px; text-decoration:none; }
+.brandmark svg{ width:34px; height:34px; flex:none; }
+.brandmark .word{ font-family:var(--font-eyebrow); font-size:1rem; letter-spacing:0.14em; color:var(--espresso); }
+nav.top .links{ display:flex; gap:28px; font-family:var(--font-body); font-size:0.86rem; font-weight:500; }
+nav.top .links a{ text-decoration:none; color:var(--umber); transition:color .2s; }
+nav.top .links a:hover{ color:var(--rosewood); }
+@media (max-width:640px){ nav.top .links{ display:none; } }
+
+/* ---- HERO ---- */
+.hero{ padding:88px 0 76px; position:relative; }
+.hero .flourish{ position:absolute; right:32px; top:26px; width:220px; height:220px; opacity:0.9; pointer-events:none; }
+@media (max-width:900px){ .hero .flourish{ display:none; } }
+.hero .kicker{ display:flex; align-items:center; gap:14px; margin-bottom:22px; }
+.hero .kicker .line{ width:38px; height:1px; background:var(--champagne); }
+.hero h1{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:600;
+  font-size:clamp(2.5rem, 6vw, 4.4rem);
+  line-height:1.08;
+  margin:0 0 28px;
+  max-width:14ch;
+  color:var(--espresso);
+  text-wrap:balance;
+}
+.hero .sub{
+  max-width:46ch;
+  font-size:1.08rem;
+  color:var(--umber);
+  margin:0 0 34px;
+  line-height:1.75;
+}
+.hero .locale{
+  font-family:var(--font-body);
+  font-size:0.82rem;
+  letter-spacing:0.05em;
+  color:var(--umber-dim);
+  margin:0 0 38px;
+  display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+}
+.hero .locale b{ color:var(--espresso); font-weight:500; }
+.hero .locale .dot{ width:3px; height:3px; border-radius:50%; background:var(--champagne); display:inline-block; }
+
+.cta-row{ display:flex; gap:16px; flex-wrap:wrap; }
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:14px 26px;
+  font-family:var(--font-body); font-weight:500; font-size:0.92rem;
+  text-decoration:none;
+  border-radius:2px;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn-primary{ background:var(--rosewood); color:var(--vellum); border:1px solid var(--rosewood); }
+.btn-primary:hover{ background:var(--rosewood-bright); transform:translateY(-2px); box-shadow:0 10px 24px -10px color-mix(in srgb, var(--rosewood) 60%, transparent); }
+.btn-ghost{ background:transparent; color:var(--espresso); border:1px solid var(--hairline); }
+.btn-ghost:hover{ border-color:var(--champagne); color:var(--rosewood); transform:translateY(-2px); }
+
+/* ---- DIVIDER ---- */
+.divider{ padding:30px 0; }
+.divider .wrap{ display:flex; align-items:center; gap:18px; }
+.divider .rule{ flex:1; height:1px; background:var(--hairline); }
+
+/* ---- SECTION SHELL ---- */
+section{ padding:78px 0; }
+.section-head{ max-width:640px; margin:0 0 48px; }
+.section-head .eyebrow{ margin-bottom:14px; display:block; }
+.section-head h2{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:600;
+  font-size:clamp(1.9rem, 3.6vw, 2.7rem);
+  margin:0 0 16px;
+  color:var(--espresso);
+  text-wrap:balance;
+}
+.section-head p{ color:var(--umber); font-size:1rem; margin:0; line-height:1.75; }
+
+/* ---- ABOUT ---- */
+.about{ background:var(--vellum-2); }
+.about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center; }
+@media (max-width:800px){ .about-grid{ grid-template-columns:1fr; gap:32px; } }
+.about-mark{ display:flex; justify-content:center; }
+.about-mark svg{ width:210px; height:210px; }
+.about-body p{ font-size:1.05rem; color:var(--umber); line-height:1.85; margin:0 0 18px; }
+.about-body p:last-child{ margin-bottom:0; }
+.about-body strong{ color:var(--espresso); font-weight:600; }
+.cert-line{
+  display:inline-flex; align-items:center; gap:10px; margin-top:22px;
+  font-family:var(--font-eyebrow); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--champagne);
+}
+
+/* ---- SERVICES ---- */
+.card-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:22px; }
+@media (max-width:800px){ .card-grid{ grid-template-columns:1fr; } }
+.card{
+  background:var(--vellum);
+  border:1px solid var(--hairline);
+  border-top:2px solid var(--champagne);
+  padding:34px 28px;
+}
+.card .num{ font-family:var(--font-eyebrow); font-size:0.68rem; letter-spacing:0.18em; color:var(--rosewood); margin:0 0 18px; }
+.card h3{ font-family:var(--font-display); font-style:italic; font-weight:600; font-size:1.4rem; margin:0 0 12px; color:var(--espresso); }
+.card p{ font-size:0.94rem; color:var(--umber); margin:0; line-height:1.7; }
+
+/* ---- FORMATION ---- */
+.formation{ background:var(--vellum-2); }
+.offer-list{ display:flex; flex-direction:column; gap:0; border-top:1px solid var(--hairline); }
+.offer{
+  display:grid; grid-template-columns:1fr auto; gap:24px; align-items:baseline;
+  padding:26px 0; border-bottom:1px solid var(--hairline);
+}
+.offer .title{ font-family:var(--font-display); font-style:italic; font-size:1.3rem; color:var(--espresso); margin:0 0 6px; }
+.offer .desc{ font-size:0.92rem; color:var(--umber); margin:0; max-width:52ch; }
+.offer .price{ font-family:var(--font-eyebrow); font-size:1.1rem; color:var(--rosewood); white-space:nowrap; }
+.offer .price.tbd{ color:var(--umber-dim); font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; }
+@media (max-width:640px){ .offer{ grid-template-columns:1fr; } }
+
+.formation-cta{ margin-top:40px; padding:32px; background:var(--vellum); border:1px solid var(--hairline); display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+.formation-cta p{ margin:0; font-family:var(--font-display); font-style:italic; font-size:1.2rem; color:var(--espresso); max-width:40ch; }
+
+/* ---- CONTACT ---- */
+.contact{ text-align:center; }
+.contact h2{
+  font-family:var(--font-display); font-style:italic; font-weight:600;
+  font-size:clamp(2rem, 4.4vw, 3rem); margin:0 0 20px; color:var(--espresso); text-wrap:balance;
+}
+.contact p{ color:var(--umber); max-width:48ch; margin:0 auto 34px; font-size:1.02rem; line-height:1.75; }
+.contact .cta-row{ justify-content:center; }
+.contact .swatches{ justify-content:center; margin:44px 0 0; }
+
+/* ---- FOOTER ---- */
+footer{ border-top:1px solid var(--hairline); padding:36px 0; }
+footer .row{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+footer .brandmark svg{ width:24px; height:24px; }
+footer .brandmark .word{ font-size:0.82rem; }
+footer .meta{ font-size:0.78rem; color:var(--umber-dim); letter-spacing:0.02em; }
+footer .meta a{ text-decoration:underline; text-underline-offset:3px; color:var(--umber); }
+footer .meta a:hover{ color:var(--rosewood); }
+
+/* ---- reveal on scroll ---- */
+.reveal{ opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.in{ opacity:1; transform:none; }
+</style>
+
+<nav class="top">
+  <div class="wrap row">
+    <a class="brandmark" href="#top">
+      <svg viewBox="0 0 60 60" aria-hidden="true">
+        <circle cx="30" cy="30" r="27" fill="none" stroke="var(--champagne)" stroke-width="1.4"/>
+        <path d="M18 34 C 22 22, 30 18, 30 18 C 30 18, 38 22, 42 34" fill="none" stroke="var(--rosewood)" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M23 33 Q 30 40 37 33" fill="none" stroke="var(--champagne)" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <span class="word">SAILEY'S</span>
+    </a>
+    <div class="links">
+      <a href="#services">Prestations</a>
+      <a href="#formation">Formation</a>
+      <a href="#contact">Réservation</a>
+    </div>
+  </div>
+</nav>
+
+<div id="top"></div>
+<header class="hero">
+  <div class="wrap">
+    <svg class="flourish" viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="100" cy="100" r="92" fill="none" stroke="var(--champagne)" stroke-width="1"/>
+      <circle cx="100" cy="100" r="78" fill="none" stroke="var(--hairline)" stroke-width="1"/>
+      <path d="M60 118 C 72 82, 100 68, 100 68 C 100 68, 128 82, 140 118" fill="none" stroke="var(--rosewood)" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
+      <path d="M74 112 Q 100 132 126 112" fill="none" stroke="var(--champagne)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+    </svg>
+    <div class="kicker reveal">
+      <span class="line"></span>
+      <span class="eyebrow">MUA &amp; Formatrice certifiée</span>
+    </div>
+    <h1 class="reveal">L'art de sublimer,<br>l'amour du détail.</h1>
+    <p class="sub reveal">Maquillage pour mariages, événements et shootings — et des formations pour celles qui veulent apprendre à sublimer, à leur rythme.</p>
+    <p class="locale reveal">
+      <b>Tanger</b><span class="dot"></span><b>Casablanca</b><span class="dot"></span><b>Marrakech</b><span class="dot"></span><b>France</b>
+    </p>
+    <div class="cta-row reveal">
+      <a class="btn btn-primary" href="https://www.instagram.com/saileyss/" target="_blank" rel="noopener">Réserver une prestation</a>
+      <a class="btn btn-ghost" href="#formation">Découvrir la formation</a>
+    </div>
+  </div>
+</header>
+
+<div class="divider"><div class="wrap"><div class="rule"></div></div></div>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-mark reveal">
+      <svg viewBox="0 0 220 220" aria-hidden="true">
+        <circle cx="110" cy="110" r="100" fill="none" stroke="var(--champagne)" stroke-width="1.4"/>
+        <circle cx="110" cy="110" r="86" fill="none" stroke="var(--hairline)" stroke-width="1"/>
+        <path d="M62 132 C 78 86, 110 66, 110 66 C 110 66, 142 86, 158 132" fill="none" stroke="var(--rosewood)" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M80 124 Q 110 150 140 124" fill="none" stroke="var(--champagne)" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="110" cy="98" r="3" fill="var(--rosewood)"/>
+      </svg>
+    </div>
+    <div class="about-body reveal">
+      <span class="eyebrow">À propos</span>
+      <p style="margin-top:18px;">Certifiée MUA et formatrice auprès de <strong>Glam by Majha</strong>, j'accompagne aujourd'hui celles qui veulent apprendre à se maquiller, se perfectionner — ou en faire leur métier.</p>
+      <p>Entre <strong>Tanger, Casablanca, Marrakech</strong> et la <strong>France</strong>, je réalise aussi des maquillages pour mariages, événements et shootings, toujours avec la même exigence : précision, douceur, et l'amour du détail.</p>
+      <span class="cert-line">✦ Formée &amp; certifiée — Glam by Majha</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Prestations</span>
+      <h2>Un maquillage pensé pour votre occasion.</h2>
+      <p>Chaque prestation est préparée en amont, adaptée à la lumière, à la tenue et au moment.</p>
+    </div>
+    <div class="card-grid">
+      <div class="card reveal">
+        <p class="num">Mariages</p>
+        <h3>Le jour J</h3>
+        <p>Un maquillage qui tient toute la journée, pensé pour votre lumière et votre robe — essai compris.</p>
+      </div>
+      <div class="card reveal">
+        <p class="num">Événements</p>
+        <h3>Soirées &amp; occasions</h3>
+        <p>Soirées, fêtes, occasions spéciales — un rendu sur-mesure, à votre image.</p>
+      </div>
+      <div class="card reveal">
+        <p class="num">Shootings</p>
+        <h3>Pensé pour la caméra</h3>
+        <p>Un maquillage étudié pour la photo, en lien direct avec le photographe et la lumière du shoot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="formation" id="formation">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Formation</span>
+      <h2>Apprendre l'art du maquillage, à ton rythme.</h2>
+      <p>Des e-books complets — tutoriels vidéo, guide produits, matériel professionnel — pour apprendre depuis chez toi.</p>
+    </div>
+    <div class="offer-list reveal">
+      <div class="offer">
+        <div>
+          <p class="title">L'art du maquillage</p>
+          <p class="desc">Le guide complet : tutoriels vidéo, explications détaillées, page produits indispensables, matériel professionnel.</p>
+        </div>
+        <p class="price">29,99€</p>
+      </div>
+      <div class="offer">
+        <div>
+          <p class="title">L'art du maquillage + Photo</p>
+          <p class="desc">Le e-book complet, avec en plus la formation photographie : matériel, logiciels, mise en lumière.</p>
+        </div>
+        <p class="price tbd">Sur saileyssformation.com</p>
+      </div>
+      <div class="offer">
+        <div>
+          <p class="title">Version Darija</p>
+          <p class="desc">Le guide complet et son option photo, disponibles en darija.</p>
+        </div>
+        <p class="price tbd">Sur saileyssformation.com</p>
+      </div>
+      <div class="offer">
+        <div>
+          <p class="title">Les bases du maquillage parfait</p>
+          <p class="desc">Le mini-guide gratuit — astuces, erreurs à éviter, produits indispensables.</p>
+        </div>
+        <p class="price tbd">Gratuit</p>
+      </div>
+    </div>
+    <div class="formation-cta reveal">
+      <p>Tu veux aller jusqu'à la certification ? Une formation MUA complète existe aussi.</p>
+      <a class="btn btn-primary" href="https://www.saileyssformation.com/" target="_blank" rel="noopener">Voir les formations →</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow reveal">Réservation</span>
+    <h2 class="reveal" style="margin-top:18px;">Un projet, une date, une envie de te sentir belle ?</h2>
+    <p class="reveal">Écris-moi en direct sur Instagram — je réponds à toutes les demandes de prestation et de formation.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-primary" href="https://www.instagram.com/saileyss/" target="_blank" rel="noopener">Écrire sur Instagram</a>
+    </div>
+    <div class="swatches reveal"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <a class="brandmark" href="#top">
+      <svg viewBox="0 0 60 60" aria-hidden="true">
+        <circle cx="30" cy="30" r="27" fill="none" stroke="var(--champagne)" stroke-width="1.4"/>
+        <path d="M18 34 C 22 22, 30 18, 30 18 C 30 18, 38 22, 42 34" fill="none" stroke="var(--rosewood)" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span class="word">SAILEY'S</span>
+    </a>
+    <span class="meta">Tanger · Casablanca · Marrakech · France — <a href="https://www.instagram.com/saileyss/" target="_blank" rel="noopener">@saileyss</a> · <a href="https://www.saileyssformation.com/" target="_blank" rel="noopener">Formations</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){ e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
