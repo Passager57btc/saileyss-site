@@ -3,7 +3,7 @@
 <meta name="description" content="Sailey's — MUA et formatrice certifiée. Maquillage événementiel entre Tanger, Casablanca, Marrakech et la France, et formations pour apprendre l'art du maquillage.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Italiana&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -19,7 +19,7 @@
   --champagne-bright:#d1ac66;
   --hairline: rgba(43,29,24,0.16);
   --font-display:'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
-  --font-eyebrow:'Italiana', 'Cormorant Garamond', Georgia, serif;
+  --font-eyebrow:'Jost', -apple-system, 'Segoe UI', sans-serif;
   --font-body:'Jost', -apple-system, 'Segoe UI', sans-serif;
 }
 @media (prefers-color-scheme: dark){
@@ -76,8 +76,9 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--rosewood); outline
 
 .eyebrow{
   font-family:var(--font-eyebrow);
-  font-size:0.78rem;
-  letter-spacing:0.22em;
+  font-weight:600;
+  font-size:0.76rem;
+  letter-spacing:0.18em;
   text-transform:uppercase;
   color:var(--rosewood);
 }
@@ -99,7 +100,7 @@ nav.top{
 nav.top .row{ display:flex; align-items:center; justify-content:space-between; padding:20px 0; }
 .brandmark{ display:flex; align-items:center; gap:12px; text-decoration:none; }
 .brandmark svg{ width:34px; height:34px; flex:none; }
-.brandmark .word{ font-family:var(--font-eyebrow); font-size:1rem; letter-spacing:0.14em; color:var(--espresso); }
+.brandmark .word{ font-family:var(--font-eyebrow); font-weight:600; font-size:1rem; letter-spacing:0.14em; color:var(--espresso); }
 nav.top .links{ display:flex; gap:28px; font-family:var(--font-body); font-size:0.86rem; font-weight:500; }
 nav.top .links a{ text-decoration:none; color:var(--umber); transition:color .2s; }
 nav.top .links a:hover{ color:var(--rosewood); }
@@ -198,7 +199,7 @@ section{ padding:78px 0; }
   border-top:2px solid var(--champagne);
   padding:34px 28px;
 }
-.card .num{ font-family:var(--font-eyebrow); font-size:0.68rem; letter-spacing:0.18em; color:var(--rosewood); margin:0 0 18px; }
+.card .num{ font-family:var(--font-eyebrow); font-weight:600; font-size:0.68rem; letter-spacing:0.18em; color:var(--rosewood); margin:0 0 18px; }
 .card h3{ font-family:var(--font-display); font-style:italic; font-weight:600; font-size:1.4rem; margin:0 0 12px; color:var(--espresso); }
 .card p{ font-size:0.94rem; color:var(--umber); margin:0; line-height:1.7; }
 
@@ -211,7 +212,7 @@ section{ padding:78px 0; }
 }
 .offer .title{ font-family:var(--font-display); font-style:italic; font-size:1.3rem; color:var(--espresso); margin:0 0 6px; }
 .offer .desc{ font-size:0.92rem; color:var(--umber); margin:0; max-width:52ch; }
-.offer .price{ font-family:var(--font-eyebrow); font-size:1.1rem; color:var(--rosewood); white-space:nowrap; }
+.offer .price{ font-family:var(--font-eyebrow); font-weight:600; font-size:1.1rem; color:var(--rosewood); white-space:nowrap; }
 .offer .price.tbd{ color:var(--umber-dim); font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; }
 @media (max-width:640px){ .offer{ grid-template-columns:1fr; } }
 
