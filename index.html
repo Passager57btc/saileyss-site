@@ -217,6 +217,14 @@ section{ padding:78px 0; }
 .card h3{ font-family:var(--font-display); font-style:italic; font-weight:600; font-size:1.4rem; margin:0 0 12px; color:var(--espresso); }
 .card p{ font-size:0.94rem; color:var(--umber); margin:0; line-height:1.7; }
 
+/* ---- GALERIE ---- */
+.gallery{ column-count:3; column-gap:18px; }
+@media (max-width:900px){ .gallery{ column-count:2; } }
+@media (max-width:560px){ .gallery{ column-count:1; } }
+.gallery figure{ margin:0 0 18px; break-inside:avoid; border:1px solid var(--hairline); overflow:hidden; }
+.gallery img{ display:block; width:100%; height:auto; transition:transform .5s ease; }
+.gallery figure:hover img{ transform:scale(1.035); }
+
 /* ---- FORMATION ---- */
 .formation{ background:var(--vellum-2); }
 .offer-list{ display:flex; flex-direction:column; gap:0; border-top:1px solid var(--hairline); }
@@ -263,6 +271,7 @@ footer .meta a:hover{ color:var(--rosewood); }
     </a>
     <div class="links">
       <a href="#services">Prestations</a>
+      <a href="#galerie">Réalisations</a>
       <a href="#formation">Formation</a>
       <a href="#contact">Réservation</a>
     </div>
@@ -328,6 +337,27 @@ footer .meta a:hover{ color:var(--rosewood); }
         <h3>Pensé pour la caméra</h3>
         <p>Un maquillage étudié pour la photo, en lien direct avec le photographe et la lumière du shoot.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="galerie">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Réalisations</span>
+      <h2>Quelques visages sublimés.</h2>
+      <p>Un aperçu des maquillages réalisés — mariages, événements et shootings.</p>
+    </div>
+    <div class="gallery reveal">
+      <figure><img src="assets/gallery/look-01.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
+      <figure><img src="assets/gallery/look-02.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
+      <figure><img src="assets/gallery/look-03.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
+      <figure><img src="assets/gallery/look-04.jpg" alt="Maquillage réalisé par Saileyss — mariée" loading="lazy"></figure>
+      <figure><img src="assets/gallery/look-05.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
+      <figure><img src="assets/gallery/look-06.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
+      <figure><img src="assets/gallery/look-07.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
+      <figure><img src="assets/gallery/look-08.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
+      <figure><img src="assets/gallery/look-09.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
     </div>
   </div>
 </section>
