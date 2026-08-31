@@ -3,7 +3,7 @@
 <meta name="description" content="Saileyss — MUA et formatrice certifiée. Maquillage événementiel entre Tanger, Casablanca, Marrakech et la France, et formations pour apprendre l'art du maquillage.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -100,7 +100,19 @@ nav.top{
 nav.top .row{ display:flex; align-items:center; justify-content:space-between; padding:20px 0; }
 .brandmark{ display:flex; align-items:center; gap:12px; text-decoration:none; }
 .brandmark svg{ width:34px; height:34px; flex:none; }
-.brandmark .word{ font-family:var(--font-eyebrow); font-weight:600; font-size:1rem; letter-spacing:0.14em; color:var(--espresso); }
+.brandmark .word{ font-family:'Italiana', var(--font-display); font-weight:400; color:var(--champagne); }
+
+/* ---- SEAL (logo mark) ---- */
+.seal{ position:relative; display:flex; align-items:center; justify-content:center; flex:none; border:1px solid var(--champagne); }
+.seal::before{ content:''; position:absolute; inset:4.2%; border:1px solid var(--champagne); opacity:0.35; }
+.seal span{ font-family:'Italiana', serif; line-height:0.82; color:var(--espresso); }
+.seal.single::before{ display:none; }
+.brandmark .seal{ width:40px; height:40px; }
+.brandmark .seal span{ font-size:28px; }
+footer .brandmark .seal{ width:32px; height:32px; }
+footer .brandmark .seal span{ font-size:22px; }
+.brandmark .word{ font-size:1.25rem; letter-spacing:0.28em; padding-left:0.28em; }
+footer .brandmark .word{ font-size:0.92rem; }
 nav.top .links{ display:flex; gap:28px; font-family:var(--font-body); font-size:0.86rem; font-weight:500; }
 nav.top .links a{ text-decoration:none; color:var(--umber); transition:color .2s; }
 nav.top .links a:hover{ color:var(--rosewood); }
@@ -108,7 +120,8 @@ nav.top .links a:hover{ color:var(--rosewood); }
 
 /* ---- HERO ---- */
 .hero{ padding:88px 0 76px; position:relative; }
-.hero .flourish{ position:absolute; right:32px; top:26px; width:220px; height:220px; opacity:0.9; pointer-events:none; }
+.hero .flourish{ position:absolute; right:32px; top:26px; width:220px; height:220px; opacity:0.95; pointer-events:none; }
+.hero .flourish span{ font-size:150px; }
 @media (max-width:900px){ .hero .flourish{ display:none; } }
 .hero .kicker{ display:flex; align-items:center; gap:14px; margin-bottom:22px; }
 .hero .kicker .line{ width:38px; height:1px; background:var(--champagne); }
@@ -180,7 +193,8 @@ section{ padding:78px 0; }
 .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center; }
 @media (max-width:800px){ .about-grid{ grid-template-columns:1fr; gap:32px; } }
 .about-mark{ display:flex; justify-content:center; }
-.about-mark svg{ width:210px; height:210px; }
+.about-mark .seal{ width:210px; height:210px; }
+.about-mark .seal span{ font-size:143px; }
 .about-body p{ font-size:1.05rem; color:var(--umber); line-height:1.85; margin:0 0 18px; }
 .about-body p:last-child{ margin-bottom:0; }
 .about-body strong{ color:var(--espresso); font-weight:600; }
@@ -232,8 +246,6 @@ section{ padding:78px 0; }
 /* ---- FOOTER ---- */
 footer{ border-top:1px solid var(--hairline); padding:36px 0; }
 footer .row{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
-footer .brandmark svg{ width:24px; height:24px; }
-footer .brandmark .word{ font-size:0.82rem; }
 footer .meta{ font-size:0.78rem; color:var(--umber-dim); letter-spacing:0.02em; }
 footer .meta a{ text-decoration:underline; text-underline-offset:3px; color:var(--umber); }
 footer .meta a:hover{ color:var(--rosewood); }
@@ -265,15 +277,7 @@ footer .meta a:hover{ color:var(--rosewood); }
 <nav class="top">
   <div class="wrap row">
     <a class="brandmark" href="#top">
-      <svg viewBox="0 0 60 60" aria-hidden="true">
-        <circle cx="30" cy="30" r="27" fill="none" stroke="url(#goldShimmer)" stroke-width="1.6"/>
-        <circle cx="30" cy="30" r="22.5" fill="none" stroke="var(--champagne)" stroke-width="1.6" stroke-dasharray="0.6 4.4" stroke-linecap="round" opacity="0.85"/>
-        <use href="#sprig" transform="translate(9,33) scale(0.8)"/>
-        <use href="#sprig" transform="translate(51,33) scale(-0.8,0.8)"/>
-        <text x="30" y="40" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="34" fill="var(--rosewood)">S</text>
-        <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(50,10) scale(0.55)"/>
-        <use href="#sparkle" fill="#fff3d6" transform="translate(8,48) scale(0.4)"/>
-      </svg>
+      <span class="seal single"><span>S</span></span>
       <span class="word">SAILEYSS</span>
     </a>
     <div class="links">
@@ -287,16 +291,13 @@ footer .meta a:hover{ color:var(--rosewood); }
 <div id="top"></div>
 <header class="hero">
   <div class="wrap">
-    <svg class="flourish" viewBox="0 0 200 200" aria-hidden="true">
-      <circle cx="100" cy="100" r="92" fill="none" stroke="url(#goldShimmer)" stroke-width="1.4"/>
-      <circle cx="100" cy="100" r="76" fill="none" stroke="var(--champagne)" stroke-width="1.8" stroke-dasharray="0.6 5.5" stroke-linecap="round" opacity="0.85"/>
-      <use href="#sprig" transform="translate(37,104) scale(2.4)"/>
-      <use href="#sprig" transform="translate(163,104) scale(-2.4,2.4)"/>
-      <text x="100" y="128" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="108" fill="var(--rosewood)" opacity="0.92">S</text>
-      <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(172,38) scale(1)"/>
-      <use href="#sparkle" fill="#fff3d6" transform="translate(24,64) scale(0.6)"/>
-      <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(150,158) scale(0.7)"/>
-    </svg>
+    <span class="flourish seal"><span>S</span>
+      <svg class="ring" viewBox="0 0 220 220" aria-hidden="true" style="position:absolute;inset:-16px;overflow:visible;">
+        <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(196,30) scale(1)"/>
+        <use href="#sparkle" fill="#fff3d6" transform="translate(14,50) scale(0.6)"/>
+        <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(170,196) scale(0.7)"/>
+      </svg>
+    </span>
     <div class="kicker reveal">
       <span class="line"></span>
       <span class="eyebrow">MUA et Formatrice certifiée</span>
@@ -318,16 +319,13 @@ footer .meta a:hover{ color:var(--rosewood); }
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="about-mark reveal">
-      <svg viewBox="0 0 220 220" aria-hidden="true">
-        <circle cx="110" cy="110" r="100" fill="none" stroke="url(#goldShimmer)" stroke-width="1.6"/>
-        <circle cx="110" cy="110" r="84" fill="none" stroke="var(--champagne)" stroke-width="2" stroke-dasharray="0.6 6" stroke-linecap="round" opacity="0.85"/>
-        <use href="#sprig" transform="translate(42,116) scale(2.6)"/>
-        <use href="#sprig" transform="translate(178,116) scale(-2.6,2.6)"/>
-        <text x="110" y="142" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="118" fill="var(--rosewood)">S</text>
-        <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(190,40) scale(0.9)"/>
-        <use href="#sparkle" fill="#fff3d6" transform="translate(28,55) scale(0.6)"/>
-        <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(35,175) scale(0.7)"/>
-      </svg>
+      <span class="seal"><span>S</span>
+        <svg class="ring" viewBox="0 0 210 210" aria-hidden="true" style="position:absolute;inset:-16px;overflow:visible;">
+          <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(182,36) scale(0.9)"/>
+          <use href="#sparkle" fill="#fff3d6" transform="translate(24,52) scale(0.6)"/>
+          <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(30,168) scale(0.7)"/>
+        </svg>
+      </span>
     </div>
     <div class="about-body reveal">
       <span class="eyebrow">À propos</span>
@@ -424,14 +422,7 @@ footer .meta a:hover{ color:var(--rosewood); }
 <footer>
   <div class="wrap row">
     <a class="brandmark" href="#top">
-      <svg viewBox="0 0 60 60" aria-hidden="true">
-        <circle cx="30" cy="30" r="27" fill="none" stroke="url(#goldShimmer)" stroke-width="1.6"/>
-        <circle cx="30" cy="30" r="22.5" fill="none" stroke="var(--champagne)" stroke-width="1.6" stroke-dasharray="0.6 4.4" stroke-linecap="round" opacity="0.85"/>
-        <use href="#sprig" transform="translate(9,33) scale(0.8)"/>
-        <use href="#sprig" transform="translate(51,33) scale(-0.8,0.8)"/>
-        <text x="30" y="40" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="34" fill="var(--rosewood)">S</text>
-        <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(50,12) scale(0.5)"/>
-      </svg>
+      <span class="seal single"><span>S</span></span>
       <span class="word">SAILEYSS</span>
     </a>
     <span class="meta">Tanger · Casablanca · Marrakech · France — <a href="https://www.instagram.com/saileyss/" target="_blank" rel="noopener">@saileyss</a> · <a href="https://www.saileyssformation.com/" target="_blank" rel="noopener">Formations</a></span>
