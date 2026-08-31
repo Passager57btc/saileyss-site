@@ -3,7 +3,7 @@
 <meta name="description" content="Saileyss — MUA et formatrice certifiée. Maquillage événementiel entre Tanger, Casablanca, Marrakech et la France, et formations pour apprendre l'art du maquillage.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -253,6 +253,12 @@ footer .meta a:hover{ color:var(--rosewood); }
       <stop offset="100%" stop-color="var(--champagne)"/>
     </linearGradient>
     <path id="sparkle" d="M0,-7 C0.8,-2.2 2.2,-0.8 7,0 C2.2,0.8 0.8,2.2 0,7 C-0.8,2.2 -2.2,0.8 -7,0 C-2.2,-0.8 -0.8,-2.2 0,-7 Z"/>
+    <g id="sprig">
+      <path d="M0,0 L15,-11" stroke="var(--champagne)" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <ellipse cx="4.5" cy="-3.3" rx="2.8" ry="1.3" fill="var(--champagne)" transform="rotate(-36 4.5 -3.3)"/>
+      <ellipse cx="8.6" cy="-6.3" rx="2.8" ry="1.3" fill="var(--champagne)" transform="rotate(-36 8.6 -6.3)"/>
+      <ellipse cx="12.6" cy="-9.3" rx="2.5" ry="1.15" fill="var(--champagne)" transform="rotate(-36 12.6 -9.3)"/>
+    </g>
   </defs>
 </svg>
 
@@ -260,10 +266,11 @@ footer .meta a:hover{ color:var(--rosewood); }
   <div class="wrap row">
     <a class="brandmark" href="#top">
       <svg viewBox="0 0 60 60" aria-hidden="true">
-        <circle cx="30" cy="30" r="27" fill="none" stroke="url(#goldShimmer)" stroke-width="2"/>
-        <circle cx="30" cy="30" r="23" fill="none" stroke="var(--champagne)" stroke-width="0.6" opacity="0.5"/>
-        <path d="M18 34 C 22 22, 30 18, 30 18 C 30 18, 38 22, 42 34" fill="none" stroke="var(--rosewood)" stroke-width="1.6" stroke-linecap="round"/>
-        <path d="M23 33 Q 30 40 37 33" fill="none" stroke="var(--champagne)" stroke-width="1.4" stroke-linecap="round"/>
+        <circle cx="30" cy="30" r="27" fill="none" stroke="url(#goldShimmer)" stroke-width="1.6"/>
+        <circle cx="30" cy="30" r="22.5" fill="none" stroke="var(--champagne)" stroke-width="1.6" stroke-dasharray="0.6 4.4" stroke-linecap="round" opacity="0.85"/>
+        <use href="#sprig" transform="translate(9,33) scale(0.8)"/>
+        <use href="#sprig" transform="translate(51,33) scale(-0.8,0.8)"/>
+        <text x="30" y="40" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="34" fill="var(--rosewood)">S</text>
         <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(50,10) scale(0.55)"/>
         <use href="#sparkle" fill="#fff3d6" transform="translate(8,48) scale(0.4)"/>
       </svg>
@@ -281,10 +288,11 @@ footer .meta a:hover{ color:var(--rosewood); }
 <header class="hero">
   <div class="wrap">
     <svg class="flourish" viewBox="0 0 200 200" aria-hidden="true">
-      <circle cx="100" cy="100" r="92" fill="none" stroke="url(#goldShimmer)" stroke-width="1.8"/>
-      <circle cx="100" cy="100" r="78" fill="none" stroke="var(--champagne)" stroke-width="0.6" opacity="0.5"/>
-      <path d="M60 118 C 72 82, 100 68, 100 68 C 100 68, 128 82, 140 118" fill="none" stroke="var(--rosewood)" stroke-width="1.6" stroke-linecap="round" opacity="0.75"/>
-      <path d="M74 112 Q 100 132 126 112" fill="none" stroke="var(--champagne)" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="url(#goldShimmer)" stroke-width="1.4"/>
+      <circle cx="100" cy="100" r="76" fill="none" stroke="var(--champagne)" stroke-width="1.8" stroke-dasharray="0.6 5.5" stroke-linecap="round" opacity="0.85"/>
+      <use href="#sprig" transform="translate(37,104) scale(2.4)"/>
+      <use href="#sprig" transform="translate(163,104) scale(-2.4,2.4)"/>
+      <text x="100" y="128" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="108" fill="var(--rosewood)" opacity="0.92">S</text>
       <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(172,38) scale(1)"/>
       <use href="#sparkle" fill="#fff3d6" transform="translate(24,64) scale(0.6)"/>
       <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(150,158) scale(0.7)"/>
@@ -311,11 +319,11 @@ footer .meta a:hover{ color:var(--rosewood); }
   <div class="wrap about-grid">
     <div class="about-mark reveal">
       <svg viewBox="0 0 220 220" aria-hidden="true">
-        <circle cx="110" cy="110" r="100" fill="none" stroke="url(#goldShimmer)" stroke-width="2.2"/>
-        <circle cx="110" cy="110" r="86" fill="none" stroke="var(--champagne)" stroke-width="0.6" opacity="0.5"/>
-        <path d="M62 132 C 78 86, 110 66, 110 66 C 110 66, 142 86, 158 132" fill="none" stroke="var(--rosewood)" stroke-width="1.8" stroke-linecap="round"/>
-        <path d="M80 124 Q 110 150 140 124" fill="none" stroke="var(--champagne)" stroke-width="1.6" stroke-linecap="round"/>
-        <circle cx="110" cy="98" r="3" fill="var(--rosewood)"/>
+        <circle cx="110" cy="110" r="100" fill="none" stroke="url(#goldShimmer)" stroke-width="1.6"/>
+        <circle cx="110" cy="110" r="84" fill="none" stroke="var(--champagne)" stroke-width="2" stroke-dasharray="0.6 6" stroke-linecap="round" opacity="0.85"/>
+        <use href="#sprig" transform="translate(42,116) scale(2.6)"/>
+        <use href="#sprig" transform="translate(178,116) scale(-2.6,2.6)"/>
+        <text x="110" y="142" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="118" fill="var(--rosewood)">S</text>
         <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(190,40) scale(0.9)"/>
         <use href="#sparkle" fill="#fff3d6" transform="translate(28,55) scale(0.6)"/>
         <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(35,175) scale(0.7)"/>
@@ -417,8 +425,11 @@ footer .meta a:hover{ color:var(--rosewood); }
   <div class="wrap row">
     <a class="brandmark" href="#top">
       <svg viewBox="0 0 60 60" aria-hidden="true">
-        <circle cx="30" cy="30" r="27" fill="none" stroke="url(#goldShimmer)" stroke-width="2"/>
-        <path d="M18 34 C 22 22, 30 18, 30 18 C 30 18, 38 22, 42 34" fill="none" stroke="var(--rosewood)" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="30" cy="30" r="27" fill="none" stroke="url(#goldShimmer)" stroke-width="1.6"/>
+        <circle cx="30" cy="30" r="22.5" fill="none" stroke="var(--champagne)" stroke-width="1.6" stroke-dasharray="0.6 4.4" stroke-linecap="round" opacity="0.85"/>
+        <use href="#sprig" transform="translate(9,33) scale(0.8)"/>
+        <use href="#sprig" transform="translate(51,33) scale(-0.8,0.8)"/>
+        <text x="30" y="40" text-anchor="middle" font-family="'Pinyon Script', cursive" font-size="34" fill="var(--rosewood)">S</text>
         <use href="#sparkle" fill="var(--champagne-bright)" transform="translate(50,12) scale(0.5)"/>
       </svg>
       <span class="word">SAILEYSS</span>
