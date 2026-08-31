@@ -225,6 +225,18 @@ section{ padding:78px 0; }
 .gallery img{ display:block; width:100%; height:auto; transition:transform .5s ease; }
 .gallery figure:hover img{ transform:scale(1.035); }
 
+/* ---- AVIS ---- */
+.avis{ background:var(--vellum-2); }
+.avis-summary{ display:flex; align-items:center; gap:14px; margin-bottom:44px; }
+.avis-summary .stars{ color:var(--champagne); font-size:1.1rem; letter-spacing:0.1em; }
+.avis-summary .count{ font-family:var(--font-eyebrow); font-size:0.86rem; color:var(--umber); }
+.avis-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:22px; }
+.avis-card{ background:var(--vellum); border:1px solid var(--hairline); padding:30px 26px; display:flex; flex-direction:column; gap:18px; }
+.avis-card .quote{ font-family:var(--font-display); font-style:italic; font-size:1.08rem; line-height:1.6; color:var(--espresso); margin:0; }
+.avis-card .who{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.avis-card .name{ font-family:var(--font-eyebrow); font-size:0.8rem; font-weight:600; color:var(--umber); }
+.avis-card .stars{ color:var(--champagne); font-size:0.82rem; letter-spacing:0.08em; }
+
 /* ---- FORMATION ---- */
 .formation{ background:var(--vellum-2); }
 .offer-list{ display:flex; flex-direction:column; gap:0; border-top:1px solid var(--hairline); }
@@ -272,6 +284,7 @@ footer .meta a:hover{ color:var(--rosewood); }
     <div class="links">
       <a href="#services">Prestations</a>
       <a href="#galerie">Réalisations</a>
+      <a href="#avis">Avis</a>
       <a href="#formation">Formation</a>
       <a href="#contact">Réservation</a>
     </div>
@@ -358,6 +371,45 @@ footer .meta a:hover{ color:var(--rosewood); }
       <figure><img src="assets/gallery/look-07.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
       <figure><img src="assets/gallery/look-08.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
       <figure><img src="assets/gallery/look-09.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Avis</span>
+      <h2>Ce qu'elles en disent.</h2>
+      <div class="avis-summary">
+        <span class="stars">★★★★★</span>
+        <span class="count">5,0 sur 5 — 23 avis Google</span>
+      </div>
+    </div>
+    <div class="avis-grid reveal">
+      <div class="avis-card">
+        <p class="quote">« Un grand merci à Yasmine pour ce maquillage magnifique ! Elle est à l'écoute de nos envies et s'adapte parfaitement à ce que l'on souhaite, tout en apportant ses précieux conseils. Le travail est soigné, rapide et professionnel. »</p>
+        <div class="who"><span class="name">Bouchra Oum Aaron</span><span class="stars">★★★★★</span></div>
+      </div>
+      <div class="avis-card">
+        <p class="quote">« Je recommande les yeux fermés ! Yasmine est une maquilleuse exceptionnelle, passionnée et ultra talentueuse. Elle sait mettre en valeur la beauté naturelle tout en respectant les goûts de chacune. »</p>
+        <div class="who"><span class="name">Safae Oua</span><span class="stars">★★★★★</span></div>
+      </div>
+      <div class="avis-card">
+        <p class="quote">« Merci beaucoup Yasmine pour ce magnifique maquillage d'invitée. Tu es une personne adorable, douce et très professionnelle. J'ai beaucoup apprécié ta façon de comprendre exactement ce que je voulais. »</p>
+        <div class="who"><span class="name">Sana Ch</span><span class="stars">★★★★★</span></div>
+      </div>
+      <div class="avis-card">
+        <p class="quote">« Très satisfaite du maquillage invitée. Une professionnelle à l'écoute, ponctuelle, sympathique et qui sait conseiller en fonction de la cliente pour la sublimer. Je recommande à 100% si vous cherchez une make-up artist à Tanger ! »</p>
+        <div class="who"><span class="name">Sophie R</span><span class="stars">★★★★★</span></div>
+      </div>
+      <div class="avis-card">
+        <p class="quote">« Travail impeccable ! Yasmine est très talentueuse, à l'écoute et le résultat est juste sublime. Le maquillage a tenu toute la soirée. »</p>
+        <div class="who"><span class="name">Houda Alaoui</span><span class="stars">★★★★★</span></div>
+      </div>
+      <div class="avis-card">
+        <p class="quote">« C'était ma première fois chez une makeup artiste et franchement j'ai adoré ! Elle est super douce, à l'écoute et le résultat était magnifique. Je recommande sans hésiter. »</p>
+        <div class="who"><span class="name">Safia</span><span class="stars">★★★★★</span></div>
+      </div>
     </div>
   </div>
 </section>
