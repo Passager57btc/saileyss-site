@@ -22,34 +22,10 @@
   --font-eyebrow:'Jost', -apple-system, 'Segoe UI', sans-serif;
   --font-body:'Jost', -apple-system, 'Segoe UI', sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --vellum:#241813;
-    --vellum-2:#2e1f19;
-    --blush:#3a2822;
-    --espresso:#f3e6d8;
-    --umber:#d8c3b4;
-    --umber-dim:#b39d8e;
-    --rosewood:#e0788a;
-    --rosewood-bright:#ea8fa0;
-    --champagne:#d1ac66;
-    --champagne-bright:#e3c284;
-    --hairline: rgba(243,230,216,0.14);
-  }
-}
-:root[data-theme="dark"]{
-  --vellum:#241813;
-  --vellum-2:#2e1f19;
-  --blush:#3a2822;
-  --espresso:#f3e6d8;
-  --umber:#d8c3b4;
-  --umber-dim:#b39d8e;
-  --rosewood:#e0788a;
-  --rosewood-bright:#ea8fa0;
-  --champagne:#d1ac66;
-  --champagne-bright:#e3c284;
-  --hairline: rgba(243,230,216,0.14);
-}
+/* Pinned to the light/cream palette always — Yasmine's explicit request,
+   the ivoire tone matches her own logo and she wants it consistent
+   regardless of a visitor's system dark-mode setting. Dark-theme tokens
+   removed on purpose, not an oversight. */
 
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -102,15 +78,10 @@ nav.top .row{ display:flex; align-items:center; justify-content:space-between; p
 .brandmark svg{ width:34px; height:34px; flex:none; }
 .brandmark .word{ font-family:'Italiana', var(--font-display); font-weight:400; color:var(--champagne); }
 
-/* ---- SEAL (logo mark) ---- */
-.seal{ position:relative; display:flex; align-items:center; justify-content:center; flex:none; border:1px solid var(--champagne); }
-.seal::before{ content:''; position:absolute; inset:4.2%; border:1px solid var(--champagne); opacity:0.35; }
-.seal span{ font-family:'Italiana', serif; line-height:0.82; color:var(--espresso); }
-.seal.single::before{ display:none; }
-.brandmark .seal{ width:40px; height:40px; }
-.brandmark .seal span{ font-size:28px; }
-footer .brandmark .seal{ width:32px; height:32px; }
-footer .brandmark .seal span{ font-size:22px; }
+/* ---- LOGO MARK (Yasmine's own illustration, replaces the placeholder "S" seal) ---- */
+.logo-mark{ border-radius:50%; object-fit:cover; flex:none; border:1px solid var(--champagne); display:block; }
+.brandmark .logo-mark{ width:40px; height:40px; }
+footer .brandmark .logo-mark{ width:32px; height:32px; }
 .brandmark .word{ font-size:1.25rem; letter-spacing:0.28em; padding-left:0.28em; }
 footer .brandmark .word{ font-size:0.92rem; }
 nav.top .links{ display:flex; gap:28px; font-family:var(--font-body); font-size:0.86rem; font-weight:500; }
@@ -121,7 +92,7 @@ nav.top .links a:hover{ color:var(--rosewood); }
 /* ---- HERO ---- */
 .hero{ padding:88px 0 76px; position:relative; }
 .hero .flourish{ position:absolute; right:32px; top:26px; width:220px; height:220px; opacity:0.95; pointer-events:none; }
-.hero .flourish span{ font-size:150px; }
+.hero .flourish img{ width:100%; height:100%; border-radius:50%; object-fit:cover; }
 @media (max-width:900px){ .hero .flourish{ display:none; } }
 .hero .kicker{ display:flex; align-items:center; gap:14px; margin-bottom:22px; }
 .hero .kicker .line{ width:38px; height:1px; background:var(--champagne); }
@@ -193,8 +164,7 @@ section{ padding:78px 0; }
 .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center; }
 @media (max-width:800px){ .about-grid{ grid-template-columns:1fr; gap:32px; } }
 .about-mark{ display:flex; justify-content:center; }
-.about-mark .seal{ width:210px; height:210px; }
-.about-mark .seal span{ font-size:143px; }
+.about-mark img{ width:100%; max-width:340px; height:auto; border:1px solid var(--champagne); }
 .about-body p{ font-size:1.05rem; color:var(--umber); line-height:1.85; margin:0 0 18px; }
 .about-body p:last-child{ margin-bottom:0; }
 .about-body strong{ color:var(--espresso); font-weight:600; }
@@ -278,7 +248,7 @@ footer .meta a:hover{ color:var(--rosewood); }
 <nav class="top">
   <div class="wrap row">
     <a class="brandmark" href="#top">
-      <span class="seal single"><span>S</span></span>
+      <img class="logo-mark" src="assets/logo-mark.jpg" alt="">
       <span class="word">SAILEYSS</span>
     </a>
     <div class="links">
@@ -294,7 +264,7 @@ footer .meta a:hover{ color:var(--rosewood); }
 <div id="top"></div>
 <header class="hero">
   <div class="wrap">
-    <span class="flourish seal"><span>S</span></span>
+    <span class="flourish"><img src="assets/logo-mark.jpg" alt="" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></span>
     <div class="kicker reveal">
       <span class="line"></span>
       <span class="eyebrow">MUA et Formatrice certifiée</span>
@@ -316,7 +286,7 @@ footer .meta a:hover{ color:var(--rosewood); }
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="about-mark reveal">
-      <span class="seal"><span>S</span></span>
+      <img src="assets/logo-full.jpg" alt="Logo Saileyss">
     </div>
     <div class="about-body reveal">
       <span class="eyebrow">À propos</span>
@@ -370,7 +340,6 @@ footer .meta a:hover{ color:var(--rosewood); }
       <figure><img src="assets/gallery/look-06.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
       <figure><img src="assets/gallery/look-07.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
       <figure><img src="assets/gallery/look-08.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
-      <figure><img src="assets/gallery/look-09.jpg" alt="Maquillage réalisé par Saileyss" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -473,7 +442,7 @@ footer .meta a:hover{ color:var(--rosewood); }
 <footer>
   <div class="wrap row">
     <a class="brandmark" href="#top">
-      <span class="seal single"><span>S</span></span>
+      <img class="logo-mark" src="assets/logo-mark.jpg" alt="">
       <span class="word">SAILEYSS</span>
     </a>
     <span class="meta">Tanger · Casablanca · Marrakech · France — <a href="https://www.instagram.com/saileyss/" target="_blank" rel="noopener">@saileyss</a> · <a href="https://www.saileyssformation.com/" target="_blank" rel="noopener">Formations</a> · <a href="/mentions-legales.html">Mentions légales</a></span>

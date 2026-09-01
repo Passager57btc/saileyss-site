@@ -17,18 +17,7 @@
   --font-display:'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
   --font-body:'Jost', -apple-system, 'Segoe UI', sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --vellum:#241813; --vellum-2:#2e1f19; --espresso:#f3e6d8;
-    --umber:#d8c3b4; --umber-dim:#b39d8e; --rosewood:#e0788a; --champagne:#d1ac66;
-    --hairline: rgba(243,230,216,0.14);
-  }
-}
-:root[data-theme="dark"]{
-  --vellum:#241813; --vellum-2:#2e1f19; --espresso:#f3e6d8;
-  --umber:#d8c3b4; --umber-dim:#b39d8e; --rosewood:#e0788a; --champagne:#d1ac66;
-  --hairline: rgba(243,230,216,0.14);
-}
+/* Pinned to the light/cream palette always — see index.html. */
 *{box-sizing:border-box;}
 body{ margin:0; background:var(--vellum); color:var(--espresso); font-family:var(--font-body); font-size:16px; line-height:1.7; -webkit-font-smoothing:antialiased; }
 .wrap{ max-width:720px; margin:0 auto; padding:0 32px; }
